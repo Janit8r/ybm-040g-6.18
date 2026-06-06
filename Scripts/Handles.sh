@@ -108,3 +108,11 @@ if [ -f "$GITHUB_WORKSPACE/Scripts/DNS-STABILITY.sh" ]; then
 	source "$GITHUB_WORKSPACE/Scripts/DNS-STABILITY.sh"
 	cd $PKG_PATH && echo "DNS stability optimization has been applied!"
 fi
+
+#应用性能优化（BBR + TCP + YouTube）
+if [ -f "$GITHUB_WORKSPACE/Scripts/PERFORMANCE-OPT.sh" ]; then
+	echo " "
+	cd "$GITHUB_WORKSPACE/wrt/"
+	source "$GITHUB_WORKSPACE/Scripts/PERFORMANCE-OPT.sh"
+	cd $PKG_PATH && echo "Performance optimization has been applied!"
+fi
