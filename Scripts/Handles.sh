@@ -100,3 +100,11 @@ if [ -f "$GITHUB_WORKSPACE/Scripts/SINGBOX-FIX.sh" ]; then
 	source "$GITHUB_WORKSPACE/Scripts/SINGBOX-FIX.sh"
 	cd $PKG_PATH && echo "sing-box DNS fix has been applied!"
 fi
+
+#应用DNS稳定性优化
+if [ -f "$GITHUB_WORKSPACE/Scripts/DNS-STABILITY.sh" ]; then
+	echo " "
+	cd "$GITHUB_WORKSPACE/wrt/"
+	source "$GITHUB_WORKSPACE/Scripts/DNS-STABILITY.sh"
+	cd $PKG_PATH && echo "DNS stability optimization has been applied!"
+fi
