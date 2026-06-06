@@ -92,3 +92,11 @@ if [ -f "$RUST_FILE" ]; then
 
 	cd $PKG_PATH && echo "rust has been fixed!"
 fi
+
+#应用sing-box DNS修复
+if [ -f "$GITHUB_WORKSPACE/Scripts/SINGBOX-FIX.sh" ]; then
+	echo " "
+	cd "$GITHUB_WORKSPACE/wrt/"
+	source "$GITHUB_WORKSPACE/Scripts/SINGBOX-FIX.sh"
+	cd $PKG_PATH && echo "sing-box DNS fix has been applied!"
+fi
